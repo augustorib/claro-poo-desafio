@@ -9,7 +9,7 @@ public class Apartamento extends Imovel {
     private String numeroApartamento;
 
 
-    public Apartamento(double valorCondominio, Endereco endereco, boolean alugado, int anoConstrucao, String numeroApartamento) {
+    public Apartamento(Endereco endereco, boolean alugado, int anoConstrucao, String numeroApartamento, double valorCondominio) {
         this.endereco = endereco;
         this.alugado = alugado;
         this.anoConstrucao = anoConstrucao;
@@ -58,5 +58,14 @@ public class Apartamento extends Imovel {
         return valorCondominio * fatorAjuste;
     }
 
-
+    @Override
+    public String toString() {
+        return "\nApartamento{" +
+                "valorCondominio=" + valorCondominio +
+                ", numeroApartamento='" + numeroApartamento + '\'' +
+                ", anoConstrucao=" + anoConstrucao +
+                ", alugado=" + alugado +
+                ", endereco=" + endereco +
+                '}';
+    }
 }

@@ -21,4 +21,13 @@ public class Casa extends Imovel{
     public int ObterTempoExistenciaImovel() {
         return LocalDate.now().getYear() - this.anoConstrucao;
     }
+
+    @Override
+    public String toString() {
+        return "\nCasa{" +
+                "anoConstrucao=" + anoConstrucao +
+                ", alugado=" + alugado +
+                ", endereco=" + endereco +
+                '}';
+    }
 }
